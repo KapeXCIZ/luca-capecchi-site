@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "NexaLight";
+  src: url(../fonts/Nexa-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "NexaBold";
+  src: url(../fonts/Nexa-Heavy.ttf);
+}
+
+:root {
+  --colore-testo-primario: #f05941;
+  --colore-testo-secondario: #be3144;
+  --colore-sfondo-primario: #22092c;
+  --colore-sfondo-secondario: #872341;
+  --colore-trasparente-blur: rgba(0, 0, 0, 0);
+  --colore-nero: #000000;
+  --offset-shadow: 4px;
+  --shadow: var(--offset-shadow) var(--offset-shadow) 0px var(--colore-sfondo-secondario);
+  --font-bold: 'NexaBold';
+  --font-light: 'NexaLight';
+}
+
+* {
+  font-family: var(--font-light);
+  color: var(--colore-testo-primario);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--colore-sfondo-primario);
+}
+/* 
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--colore-trasparente-blur);
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: var(--colore-testo-secondario);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 5px;
+}
+
+
+
+
+ul.topnav li a:hover:not(.active) {
+  background-color: var(--colore-nero);
+}
+
+ul.topnav li a.active {
+  background-color: var(--colore-sfondo-secondario);
+  color: var(--colore-testo-primario);
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+
+
+li.right a {
+  background-color: none;
+}
+
+
+nav {
+  padding: 0;
+  margin: 0 1em;
+}
+
+ */
+
+/* Stili di base per la navbar */
+.main {
+  display: block;
+  color: var(--colore-testo-secondario);
+  text-align: center;
+  padding: 11px 16px 0px 0px;
+  text-decoration: none;
+  font-family: var(--font-bold);
+  font-size: 1.4em;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: var(--colore-testo-secondario);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 5px;
+}
+
+ul.topnav li a.active {
+  background-color: var(--colore-sfondo-secondario); /* Colore di sfondo per il link attivo */
+  color: var(--colore-testo-primario); /* Colore del testo per il link attivo */
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: var(--colore-nero); /* Colore di sfondo per il link hover */
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+/* Stili per la navbar quando è in modalità mobile */
+@media screen and (max-width: 612px) {
+  .main{
+    padding: 10px;
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 2rem;
+  }
+
+  ul.topnav li {
+    float: none;
+    display: block;
+    text-align: center;
+
+  }
+
+  ul.topnav li.right {
+    float: none;
+    text-align: left;
+  }
+
+  ul.topnav li a {
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 0;
+    
+  }
+
+  ul.topnav li a.active {
+    background-color: var(--colore-sfondo-secondario);
+    color: var(--colore-testo-primario);
+  }
+
+  ul.topnav li a:hover:not(.active) {
+    background-color: var(--colore-nero);
+  }
+
+}
+
+nav {
+  padding: 0;
+  margin: 0 1em;
+}
+
+
+
+
+.side-links {
+  background-color: var(--colore-nero);
+  filter: blur(0.2);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 1em;
+  border-radius: 10px;
+  position: absolute;
+  position: fixed;
+  top: 50%;
+}
+
+.side-links img {
+  width: 30px;
+  padding: 3px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.side-links img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1050px) {
+  .side-links {
+    background-color: var(--colore-nero);
+    filter: blur(0.2);
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 1em;
+    border-radius: 10px;
+    position: absolute;
+    position: fixed;
+    top: 90%;
+    right: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+
+.box-shadow {
+  margin-right: var(--offset-shadow);
+  margin-bottom: var(--offset-shadow);
+  box-shadow: var(--shadow);
+}
+
+.divprova {
+  height: 10000px;
+}
+
+.main-image img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.main-image {
+  height: 300px;
+  width: 300px;
+}
+
+.main-title {
+  font-family: var(--font-bold);
+  font-size: 5em;
+  line-height: 1em;
+  text-shadow: 4px 4px 0px var(--colore-nero);
+  letter-spacing: 0px;
+  padding: 0;
+  margin-bottom: 0;
+  
+}
+
+.text-segment p{
+  font-size: 1.5em;
+  height: fit-content;
+}
+
+.text-segment{
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  @media screen and (max-width: 1050px){
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  @media screen and (max-width: 612px){
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 1vh;
+  }
+
+  
+}
+
+.container {
+  height: fit-content;
+  background-color: none;
+  display: flex;
+  margin: 1em;
+  /* border: 1px solid red; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.my-games{
+  height: 600px;
+  background-color: var(--colore-sfondo-secondario);
+  border-radius: 20px;
+}
+
+.my-games h1{
+  color: var(--colore-nero);
+  font-family: var(--font-bold);
+  font-size: 2.5rem;
+}
+
+/* https://colorhunt.co/palette/22092c872341be3144f05941 */
+
+.minesweeper-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
